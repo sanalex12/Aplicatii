@@ -1,0 +1,43 @@
+
+
+{% extends "users/base.html" %}
+{% load static %}
+
+
+
+
+
+{% block content %}
+
+{% block extra_css %}
+<link rel="stylesheet" href=" {% static 'users/css/home.css' %}" />
+{% endblock %}
+
+</div>
+<div class="home-recipes">
+  <h2>Recipes</h2>
+  <div class="cards-wrapper">
+    {% for recipe in recipes %}
+    <div class="card-recipe">
+      <div
+        class="img-card"
+        style="background: url({{ recipe.img.url }}); background-position: center; background-size: cover; background-repeat: no-repeat;"
+      ></div>
+      <div class="card-details">
+        <h3>{{ recipe.title }}</h3>
+        <p>author: <span>{{ recipe.user.username }}</span></p>
+        <button>
+          <a href="{% url 'recipes:recipe_detail' recipe.id %}"
+            >View Recipe</a
+          >
+        </button>
+      </div>
+    </div>
+
+    {% empty %}
+    <p>No recipes found.</p>
+    {% endfor %}
+  </div>
+</div>
+</div>
+{% endblock %}

@@ -1,0 +1,47 @@
+{% extends "recipes/base_recipe.html" %}
+{% load static %}
+
+
+{% block content %}
+
+
+{% block extra_css %}
+<link rel="stylesheet" href=" {% static 'recipes/css/update_recipe.css' %}" />
+{% endblock %}
+
+
+{% load widget_tweaks %}
+
+
+
+<div class="recipe-create">
+  <h2 class="title">Update Recipe: <span class="title-span">{{ recipe.title }}</span></h2>
+  <form method="post" enctype="multipart/form-data" class="create-wrapper">
+    {% csrf_token %}
+  
+    <div class="input">
+      <label class="label-name label">Name</label>
+      {{ form.title|add_class:"input-name"|attr:"placeholder:Enter the Name" }}
+    </div>
+    <div class="input">
+      <label class="label-instructions label">Instructions</label>
+      {{ form.instructions|add_class:"input-instructions"|attr:"placeholder:Enter the Recipe, rows:5" }}
+    </div>
+    <div class="input">
+      <label  class="label-name label">Time of Execution</label>
+      {{ form.time_of_execution|add_class:"input-name"|attr:"placeholder:Enter the Time of Execution" }}
+    </div>
+    <div class="input1">
+      <label for="file-upload" class="label-name label "
+        >Upload Image</label
+      >
+      {{ form.img|add_class:"input-upload" }}
+    </div>
+    <button type="submit" class="btn-recipe">Save Recipe</button>
+  </form>
+  </div>
+</div>
+
+
+
+{% endblock %}

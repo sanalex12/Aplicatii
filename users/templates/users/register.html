@@ -1,0 +1,54 @@
+{% load static %} {% load widget_tweaks %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register</title>
+    <link rel="stylesheet" href=" {% static 'users/css/register.css' %}" />
+   
+  </head>
+  <body>
+
+    <div class="register-wrapper">
+      
+      <div class="left">
+        <img src="{% static 'users/images/bg2.jpg' %}" alt="" />
+        <div class="overlay">
+            <h1>Recipe Land</h1>
+        </div>
+      </div>
+
+      <div class="right">
+        <h2>Registration</h2>
+        {% if messages %}
+        <ul class="messages">
+            {% for message in messages %}
+            <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+            {% endfor %}
+        </ul>
+       {% endif %}
+        <form method="POST" action="">
+          {% csrf_token %}
+          <div class="input">
+            <label class="label-name label">Name</label>
+            {{ form.username|add_class:"input-name" }}
+          </div>
+          <div class="input1">
+            <label class="label-email label">Email</label>
+            {{ form.email|add_class:"input-email" }}
+          </div>
+          <div class="input2">
+            <label class="label-password label">Password</label>
+            {{ form.password1|add_class:"input-pasword" }}
+          </div>
+          <div class="input3">
+            <label class="label-1password label">Confirm Password</label>
+            {{ form.password2|add_class:"input-2pasword" }}
+          </div>
+          <button type="submit" class="btn-register">Register</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

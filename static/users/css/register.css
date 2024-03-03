@@ -1,0 +1,144 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(31, 168, 151);
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.register-wrapper {
+  width: 90%;
+  height: 90%;
+  display: flex;
+  border-radius: 50px;
+  overflow: hidden; 
+}
+
+.left,
+.right {
+ 
+  position: relative; 
+}
+
+.left {
+
+  flex-basis: 45%;
+  position: relative;
+}
+
+.left img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+ }
+ 
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(31, 168, 151, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay h1 {
+  color: rgb(50, 43, 87);
+  font-size: 4.5vw;
+  margin-bottom: 6vw;
+  text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+}
+
+.right {
+  background-color: rgb(251, 251, 251);
+  flex-basis: 55%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3vw;
+  gap: 2.5vw;
+}
+
+.right h2 {
+  font-size: 4vw;
+  color: rgb(31, 168, 151);
+}
+
+.label {
+  font-size: 1.3vw;
+  text-transform: capitalize;
+  font-weight: bold;
+  color: rgb(50, 43, 87);
+}
+
+.label-name {
+  margin-right: 8vw;
+}
+
+.label-email {
+  margin-right: 8vw;
+}
+.label-paswword {
+  margin-right: 7vw;
+}
+
+.input-name,
+.input-email,
+.input-pasword,
+.input-2pasword {
+  padding: 1.2vw 2vw;
+  width: 25vw;
+  border: none;
+  background-color: rgb(243, 243, 243);
+  border-radius: 10px;
+  outline-color: rgb(31, 168, 151);
+  margin-left: 2vw;
+  color: black;
+  font-size: 1.2vw;
+  font-weight: 500;
+  margin-bottom: 1.5vw;
+  border: 1px solid black;
+}
+
+.input-pasword {
+  margin-left: 8vw;
+}
+.input-2pasword {
+  margin-left: 2.9vw;
+}
+
+.input-name {
+  margin-left: 2.1vw;
+}
+
+.btn-register {
+  padding: 1vw 3vw;
+  font-size: 1vw;
+  border-radius: 10px;
+  border: none;
+  background-color: rgb(31, 168, 151);
+  color: rgb(251, 251, 251);
+  font-weight: bold;
+  transition: background-color 0.3s ease-in;
+  cursor: pointer;
+  margin-left: 15vw;
+  margin-top: 2vw;
+}
+
+.btn-register:hover {
+  background-color: rgb(50, 43, 87);
+}
+.btn-register:active {
+  background-color: rgb(86, 77, 129);
+}

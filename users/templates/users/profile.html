@@ -1,0 +1,54 @@
+{% extends "users/base.html" %}
+{% load static %}
+
+
+{% block content %}
+
+{% block extra_css %}
+<link rel="stylesheet" href=" {% static 'users/css/profile.css' %}" />
+{% endblock %}
+
+
+</div>
+<div class="home-recipes">
+  <a href="{% url 'recipes:create_recipe' %}" class="button-wrapper">
+    <button class="add-recipe">Add Recipe</button>
+</a>
+  <h2>My Recipes</h2>
+  <div class="cards-wrapper">
+    {% for recipe in recipes %}
+      <div class="card-recipe ">
+        <div class="img-card " style="background: url({{ recipe.img.url }}); background-position: center; background-size: cover; background-repeat: no-repeat;">
+        
+        </div>
+        <div class="card-details">
+        <h3>{{ recipe.title }}</h3>
+      
+        <div class="btns">
+          <button>
+            <a href="{% url 'recipes:recipe_detail' recipe.id %}"
+              >View Recipe</a
+            >
+          </button>
+          <button class="update"><a href="{% url 'recipes:update_recipe' recipe.id %}"
+            >Update</a
+          ></button>
+          <button class="delete"><a href="{% url 'recipes:delete_recipe' recipe.id %}"
+            >Delete</a
+          ></button>
+
+        </div>
+        </div>
+      </div>
+    {% empty %}
+    <p>You have no recipes.</p>
+    {% endfor %}
+
+
+
+  
+  </div>
+</div>
+</div>
+
+{% endblock %}

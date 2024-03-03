@@ -1,0 +1,90 @@
+.recipe-create {
+  width: 100%;
+  height: 87vh;
+  padding: 2vw 7vw;
+  background-color: rgb(219, 235, 233);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2vw;
+}
+
+.title {
+  font-size: 3vw;
+  color: rgb(50, 43, 87);
+}
+
+.create-wrapper {
+  width: 40%;
+  height: 90%;
+
+  display: flex;
+  align-items: left;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1.5vw;
+  padding: 1vw 2vw;
+  border-radius: 20px;
+  background-color: rgb(37, 216, 195);
+}
+
+.label {
+  font-size: 1.3vw;
+  text-transform: capitalize;
+  font-weight: bold;
+  color: rgb(50, 43, 87);
+}
+
+.input-name {
+  padding: 1.2vw 2vw;
+  width: 25vw;
+  border: none;
+  background-color: rgb(243, 243, 243);
+  border-radius: 10px;
+  outline-color: rgb(31, 168, 151);
+  margin-left: 2vw;
+  font-size: 1.3vw;
+  color:black;
+}
+
+.input-instructions {
+  padding: 1.2vw 2vw;
+  color:black;
+  border: none;
+  background-color: rgb(243, 243, 243);
+  border-radius: 10px;
+  outline-color: rgb(31, 168, 151);
+  margin-left: 2vw;
+  font-size: 1.3vw;
+  
+}
+
+.input {
+  display: flex;
+  align-items: center; 
+
+  gap: 20px;
+}
+
+.input-instructions,
+.input-name {
+ 
+  flex-grow: 1; 
+}
+
+.btn-recipe {
+  padding: 1vw 3vw;
+  font-size: 1vw;
+  border-radius: 10px;
+  border: none;
+  background-color: rgb(50, 43, 87);
+  color: rgb(251, 251, 251);
+  font-weight: bold;
+  transition: background-color 0.3s ease-in;
+  cursor: pointer;
+  width: 50%;
+  margin-left: 7vw;
+  margin-top: 2vw;
+}
+
